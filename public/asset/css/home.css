@@ -1,0 +1,152 @@
+/*
+@font-face{
+	font-family: 'Montserrat', 'sans-serif';
+	src: url(Fonts/Montserrat-SemiBold) format('ttf');
+}
+*/
+
+.navbar{
+	position: relative;
+	z-index: 1;
+}
+
+/*Untuk Panel*/
+
+.info-panel{
+	margin-top: -100px;
+	box-shadow: 0 2px 15px #413BA2;
+	border-radius: 15px;
+	background-color: white;
+	padding: 8px;
+}
+
+.info-panel img{
+	width: 80px;
+	height: 80px;
+	margin-bottom: 15px;
+	margin-right: 15px;
+}
+
+.info-panel h4{
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+.info-panel p{
+	font-size: 15px;
+}
+
+.container .author{
+	text-align: center;
+	margin-top: -30px;
+}
+
+.nav-item, .navbar-brand{
+	font-family: 'Merriweather Sans', sans-serif;
+	margin-top: 15px;
+	margin-right: 50px;
+	text-transform: uppercase;
+}
+
+.nav-link:hover::after{
+	content: '';
+	display: block;
+	width: 50%;
+	margin: auto;
+	border-bottom: 3px solid #FF8700;
+	padding-bottom: 5px;
+	margin-bottom: -8px;
+}
+
+.kontak{
+	width: 500px;
+	margin-bottom: 100px;
+}
+
+
+.kontak2{
+	text-decoration: none;
+	margin-top: 100px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-brand{
+	margin-left: 50px;
+}
+
+
+.jumbotron-fluid{
+	margin-top: -70px;
+	bottom: 0;
+	top: 0;
+/*	background-color:#413BA2;*/
+}
+
+.jtanya{
+	margin-top: 50px;
+	text-align: center;
+	font-family: 'Merriweather Sans', sans-serif;
+}
+
+
+.jumbotron-fluid .img {
+	bottom: 0;
+	right: 0;
+	margin-top: 100px;
+	width: 450px;
+	margin-bottom: 70px;
+/*	background-image: url('img/bg1.png');*/
+/*	background-size: cover;
+	height: 650px;
+	margin-top: -70px;*/
+}
+
+.author{
+	text-align: center;
+	padding: 3px;
+	color: white;
+	margin-bottom: 0;
+}
+
+.tombol{
+	text-transform: uppercase;
+	background-color: #FF8700;
+	border-radius: 10px;
+	border:none;
+	text-decoration: none;
+}
+
+.tombol:hover{
+	background-color: #FF8700;
+}
+
+.container{
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+.container h2{
+	margin-top: 100px;
+	margin-bottom: 15px;
+}
+
+.container h5 .yuk{
+	margin-top: 30px;
+}
+
+span{
+font-weight: bold;
+/*font-family: 'Lobster', cursive;*/
+}
+
+/*About h5*/
+.h5about{
+	margin-bottom: 70px;
+}
+
+/*Untuk Registrasi*/
+
+.form{
+	border-color: aqua;
+}
+

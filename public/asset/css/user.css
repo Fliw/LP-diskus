@@ -1,0 +1,131 @@
+
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+/*Untuk navbar*/
+.navbar-brand, .link{
+	color: white !important;
+}
+
+.navbar-brand{
+	color: white;
+	margin-left: 50px;
+}
+
+.nav-item, .navbar-brand{
+	position: relative;
+	z-index: 1;
+	font-family: 'Merriweather Sans', sans-serif;
+	margin-top: 15px;
+	margin-right: 50px;
+	text-transform: uppercase;
+}
+
+.nav-link:hover::after{
+	content: '';
+	display: block;
+	width: 50%;
+	margin: auto;
+	border-bottom: 3px solid #FF8700;
+	padding-bottom: 5px;
+	margin-bottom: -8px;
+}
+
+.tombol {
+	color: white;
+	text-transform: uppercase;
+	background-color: #FF8700;
+	border-radius: 10px;
+	border:none;
+	text-decoration: none;
+}
+
+.tombol:hover{
+	background-color: #acacac;
+}
+
+.tanya{
+	color: white;
+	text-decoration: none;
+	background-color: #FF8700;
+	border:none;
+	border-radius: 10px;
+}
+
+.tanya:hover{
+	color: white;
+	background-color: #FF8700;
+	border:none;
+}
+
+span{
+	font-weight: bold;
+}
+
+/*Untuk Jumbotron*/
+#carouselExampleIndicators{
+	position: relative;
+	margin-top: -100px;
+}
+
+.carousel-inner img{
+	height: 660px;
+}
+
+.carousel-inner h1{
+	margin-top: -350px;
+}
+
+.carousel-inner .btn{
+margin-top: 50px;
+}
+
+/*Container*/
+.container h1{
+	margin-top: 20px;
+	text-align: center;
+}
+
+.container h1, h3{
+	padding: 10px;
+}
+
+
+/*Footer*/
+.footer{
+	text-align: center;
+	padding: 3px;
+	color: white;
+	margin-bottom: 0;
+}
+
+
+/*Materi*/
+.materi{
+	color: white;
+/*	height: 30px;*/
+}
+
+/*Jawaban*/
+.jawaban{
+	height: 50px;
+	text-align: center;
+}
+
+.jawaban h4{
+	margin-top: -10px;
+	font-weight: bold;
+	color: black;
+}
+
+/*Pertanyaan*/
+.container .pertanyaan{
+	text-align: center;
+}
+
+
+
+
+
+
