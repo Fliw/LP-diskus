@@ -45,7 +45,7 @@ class materiController extends Controller
     {
         $request->validate([
             'judul' => 'required',
-            'id_kategori' => 'required',
+            'id_kategori' => 'required|integer',
             'dari' => 'required',
             'pertanyaan' =>'required'
         ]);
