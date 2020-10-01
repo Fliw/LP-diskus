@@ -7,12 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Tags extends Model
 {
     protected $fillable = ['name'];
-
+    /**
+	 *
+	 *many to many relationship
+     * @return ORM
+	 *
+	 */
     public function post()
     {
-    	//Lebih dari 1
-    	return $this-> belongsToMany('App\Materi');
+        return $this->belongsToMany('App\Materi');
     }
-
 
 }

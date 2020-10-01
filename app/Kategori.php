@@ -6,12 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kategori extends Model
 {
-    protected $fillable = ['kategori'];
-
-
+	protected $fillable = ['kategori'];
+	/**
+	 *
+	 *one to many relationship
+	 *@return ORM
+	 *
+	 */
 	public function materi()
 	{
-		//lebih dari 1
 		return $this->hasMany('App\Materi');
 	}
 	

@@ -6,9 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+    /**
+	 *
+     *one to one relationship
+     *@return ORM
+	 *
+	 */
     public function user()
     {
-    	//relasi
-    	return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User');
     }
 }
