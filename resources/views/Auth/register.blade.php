@@ -28,7 +28,7 @@
                     <label for="nama" class=" form-control-label">Nama Lengkap</label>
                   </div>
                   <div class="col-12 col-md-8">
-                    <input type="text" id="nama" autofocus="" autocomplete="off" name="name" value="{{ old('name') }}" placeholder="Masukkan Nama Lengkap" class="form-control">
+                    <input type="text" id="nama" autofocus="" autocomplete="off" name="name" value="{{ old('name') }}" placeholder="Masukkan Nama Lengkap" class="form-control" required>
                   </div>
               </div>
               <div class="row form-group">
@@ -36,14 +36,14 @@
                     <label for="hf-email" class=" form-control-label">Email</label>
                   </div>
                   <div class="col-12 col-md-8">
-                    <input type="email" id="hf-email" autocomplete="off" value="{{ old('email') }}" name="email" placeholder="Masukkan Email" class="form-control">
+                    <input type="email" id="hf-email" autocomplete="off" value="{{ old('email') }}" name="email" placeholder="Masukkan Email" class="form-control" required>
                   </div>
               </div>
               <div class="row form-group">
                   <div class="col col-md-4">
                     <label for="hf-password" class=" form-control-label">Password</label></div>
                   <div class="col-12 col-md-8">
-                    <input type="password" id="hf-password" autocomplete="off" name="password" placeholder="Masukkan Password" class="form-control">
+                    <input type="password" id="hf-password" autocomplete="off" name="password" placeholder="Masukkan Password" class="form-control" required>
                   </div>
               </div>
               <div class="row form-group">
@@ -51,7 +51,7 @@
                     <label for="hf-password" class=" form-control-label">Konfirmasi Password</label>
                   </div>
                   <div class="col-12 col-md-8">
-                    <input type="password" id="hf-password" autocomplete="off" name="password" placeholder="Konfirmasi Password" class="form-control">
+                    <input type="password" id="hf-password" autocomplete="off" name="password" placeholder="Konfirmasi Password" class="form-control" required>
                   </div>
                     </div>
             </div>
