@@ -1,20 +1,28 @@
 <?php
 
 namespace App\Http\Controllers;
+
 // use Alert;
-use Auth;
-use Illuminate\Http\Request;
 
 class homeController extends Controller
 {
+    /**
+	 *
+	 *@return view
+	 *
+	 */
     public function home()
     {
-    	return view('Home/index');
+        return view('Home/index');
     }
-
+    /**
+	 *
+	 *@return view 
+	 *
+	 */
     public function tentang()
     {
-    	return view('Home/tentang');
+        return view('Home/tentang');
     }
 
 }

@@ -3,43 +3,52 @@
 namespace App\Http\Controllers;
 
 use Alert;
-use App\Materi;
 use App\Kategori;
+use App\Materi;
 use App\Tags;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\DB;
 
 class materiController extends Controller
 {
-    
+    /**
+	 *
+	 *@return view with compact
+	 *
+	 */
     public function index()
     {
-        $materi= Materi::paginate(12);
+        $materi = Materi::paginate(12);
         return view('User/home', compact('materi'));
     }
-
- 
+    /**
+	 *
+	 *@return view with ORM
+	 *
+	 */
     public function create()
     {
-        $kategori= Kategori::all();
-        $tags= Tags::all();
+        $kategori = Kategori::all();
+        $tags = Tags::all();
         return view('User/tanya')->withKategori($kategori)->withTags($tags);
     }
-
+    /**
+	 *
+     *@param var request
+     *@return redirect 
+	 *
+	 */
     public function store(Request $request)
     {
         $request->validate([
             'judul' => 'required',
             'id_kategori' => 'required|integer',
             'dari' => 'required',
-            'pertanyaan' =>'required'
+            'pertanyaan' => 'required',
         ]);
 
-        // $materi= Materi::create($request->all());
-
         $materi = new Materi;
-        $materi->judul = $request->judul;  
+        $materi->judul = $request->judul;
         $materi->id_kategori = $request->id_kategori;
         $materi->slug = Str::slug($materi->judul);
         $materi->dari = $request->dari;
@@ -52,39 +61,28 @@ class materiController extends Controller
         if ($materi) {
             Alert::success('Pertanyaan Berhasil di post pak', 'selamat');
             return redirect('/Home');
-        } else{
+        } else {
             Alert::error('Pertanyaan gagal di post pak', 'Yeahhh');
             return redirect('/Home/tanya');
         }
     }
-
+    /**
+	 *
+	 *@param slug
+	 *@return view with compact
+	 */
     public function show($slug)
-    {    
-        $materi = Materi::where('slug','=', $slug)->first();
+    {
+        $materi = Materi::where('slug', '=', $slug)->first();
         return view('User/materi', compact('materi'));
     }
-
-    
-    public function edit(Materi $materi)
-    {
-        
-    }
-
-    
-
-    public function update(Request $request, Materi $materi)
-    {
-        //
-    }
-
-    
-    public function destroy(Materi $materi)
-    {
-        //
-    }
-
+    /**
+	 *
+	 *@return view
+	 *
+	 */
     public function aturan()
     {
-       return view('User/aturan');
+        return view('User/aturan');
     }
 }

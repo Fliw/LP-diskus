@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Kategori;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class kategoriController extends Controller
 {
@@ -12,10 +11,11 @@ class kategoriController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     * @return view with compact
      */
     public function index()
     {
-        $kategori= Kategori::All();
+        $kategori = Kategori::All();
         return view('User/materi', compact('kategori'));
     }
 
@@ -26,7 +26,7 @@ class kategoriController extends Controller
      */
     public function create()
     {
-        $kategori= Kategori::all();
+        $kategori = Kategori::all();
         return view('user/kategori/create', compact('kategori'));
     }
 
@@ -39,38 +39,14 @@ class kategoriController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'kategori' => 'required'
+            'kategori' => 'required',
         ]);
-
-        $kategori= new Kategori;
+        $kategori = new Kategori;
         $kategori->kategori = $request->kategori;
         $kategori->save();
 
         return back();
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
     /**
      * Update the specified resource in storage.
      *
@@ -80,11 +56,10 @@ class kategoriController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $request->validate([
-            'kategori' => 'required'
+        $request->validate([
+            'kategori' => 'required',
         ]);
-
-        $kategori= Kategori::find($id);
+        $kategori = Kategori::find($id);
         $kategori->kategori = $request->kategori;
         $kategori->save();
 
