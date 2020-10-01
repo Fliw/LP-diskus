@@ -10,17 +10,17 @@
     <div class="row">
       <div class="col">
         <div class="col-md-5 float-right">
-       <img  class="img" src="{{url('asset/img/login2.svg')}}">
-       </div>
-       <div class="col-md-1">
-         <div> </div>
-       </div>
-       <div class="col-md-6 float-left mt-5">
-      <div class="form mt-5">
-         <div class="card">
-            <div class="card-header">
+          <img  class="img" src="{{url('asset/img/login2.svg')}}">
+        </div>
+        <div class="col-md-1">
+          <div> </div>
+        </div>
+        <div class="col-md-6 float-left mt-5">
+          <div class="form mt-5">
+            <div class="card">
+              <div class="card-header">
                 Silahkan Masuk
-            </div>
+              </div>
             <form action="/proses" method="post" class="form-horizontal">
             <div class="card-body card-block">
                   @csrf
@@ -40,11 +40,11 @@
                   </div>
               </div>
             </div>
-                <button class="btn btn-primary btn-sm float-right tombol mr-3"> Masuk </button>
+          <button class="btn btn-primary btn-sm float-right tombol mr-3"> Masuk </button>
         </form>
-        </div>
+      </div>
     </div>
-   </div>
+  </div>
 </div>
 </div>
 </div>

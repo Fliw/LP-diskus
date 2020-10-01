@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col-md-7">
       </div>
-       
+
         <h2> Yuk diskusi bareng di <br> <span>Share Room</span>! </h2>
         <h4>Buka pintu ilmu pengetahuan dengan pertanyaan. <br>
         Mari ber-diskusi yang bermanfaat bareng <span>Share Room</span>! </h4>
