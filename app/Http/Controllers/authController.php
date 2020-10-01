@@ -2,62 +2,76 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
 use App\User;
-use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
 use Auth;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class authController extends Controller
 {
+	/**
+	 *
+	 * Return view auth
+	 * @return view
+	 *
+	 */
     public function auth()
     {
-    	return view('Auth/login');
+        return view('Auth/login');
     }
-
+	/**
+	 *
+	 *
+	 * login attempt
+	 * @param var Request
+	 * @return string OR view
+	 * 
+	 */
     public function prosesLogin(Request $request)
     {
-    	If(Auth::attempt($request->only('email', 'password'))){
+        if (Auth::attempt($request->only('email', 'password'))) {
 
+            return redirect('/Home');
+        } else {
 
-	// Alert::toast('Berhasil Masuk Pak!','success');
-     // Alert::success('Selamat!','Berhasil Masuk pak, Selamat Datang!');
-		return redirect('/Home');
-    } else{
-
-		echo "Gagal";
-		return redirect('/login');
+            echo "Gagal";
+            return redirect('/login');
+        }
     }
-}
-
-	public function register()
-	{
-		return view('Auth/register');
-	}
-
-	public function prosesRegistrasi(Request $request)
-	{
-
-		// dump($request);
-		$request::validate([
+	/**
+	 *
+	 *return view register
+	 * @return view
+	 *
+	 */
+    public function register()
+    {
+        return view('Auth/register');
+    }
+	/**
+	 *
+	 *validate register request
+	 *@param var Request
+	 *@return view
+	 *
+	 */
+    public function prosesRegistrasi(Request $request)
+    {
+        $request::validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
-
-		 	User::create([
+        User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
 
-		return redirect('/login');
+        return redirect('/login');
 
-	}
+    }
 
 }
-
