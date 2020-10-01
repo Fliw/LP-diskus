@@ -6,6 +6,5 @@
 
 @section('konten')
 
-
 @endsection
 @section('footer')
