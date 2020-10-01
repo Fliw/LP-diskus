@@ -11,42 +11,59 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-//Route Login
+    /**
+	 *
+     * @return login Route
+	 *
+	 *
+	 */
 Route::get('/login', 'authController@auth');
 Route::post('/proses', 'authController@prosesLogin');
 Route::get('/registrasi', 'authController@register');
 Route::post('/prosesRegistrasi', 'authController@prosesRegistrasi');
 
-
-//User
-// Route::get('/home', 'userController@home');
+    /**
+	 *
+	 * @return user route
+	 *
+	 */
 Route::get('/', 'homeController@home');
 Route::get('/tentang', 'homeController@tentang');
 
-
-//Anggota
+    /**
+	 *
+	 * @return anggota route
+	 *
+	 */
 Route::get('/Home', 'materiController@index');
 Route::get('/Home/tanya', 'materiController@create');
 Route::post('/Home/tanya', 'materiController@store');
 Route::get('/topik/detail/{materi}', 'materiController@show');
 Route::get('/Home/aturan', 'materiController@aturan');
 
-//Kategori
+    /**
+	 *
+	 * @return kategori route
+	 *
+	 */
 Route::get('/kategori/create', 'kategoriController@create');
 Route::post('/kategori/create', 'kategoriController@store');
 Route::PUT('/kategori/update/{id}', 'kategoriController@update');
 Route::get('/kategori/delete/{id}', 'kategoriController@destroy');
-
-//Tag
+    /**
+	 *
+	 * @return tag route
+	 *
+	 */
 Route::get('/tag/create', 'tagController@create');
 Route::post('/tag/create', 'tagController@store');
 Route::get('/tag/delete/{id}', 'tagController@destroy');
 
-
-//Route Komen
+    /**
+	 *
+	 * @return comment route
+	 *
+	 */
 Route::post('/comment/create/{id}', 'comentController@buatKomen')->name('buatkomen.store');
 
 
